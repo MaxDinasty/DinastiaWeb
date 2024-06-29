@@ -4,7 +4,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link href="bootstrap-5.3.3/css/bootstrap.css" rel="stylesheet" >
+    <link href="bootstrap-5.3.3/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body, html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      .overlay-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+      }
+      .overlay-content img {
+        max-width: 150px;
+        margin-bottom: 20px;
+      }
+    </style>
   </head>
   <body>
 
@@ -33,14 +61,23 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Comunidad</a>
             </li>
-            
           </ul>
         </div>
       </div>
     </nav>
 
+    <!-- VIDEO DE FONDO -->
+    <video class="bg-video" autoplay muted loop>
+      <source src="ruta-del-video.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
 
-    <h1>Hello, world!</h1>
+    <!-- CONTENIDO SUPERPUESTO -->
+    <div class="overlay-content">
+      <img src="ruta-del-logo.png" alt="Logo">
+      <h1>Tu frase personalizada aquí</h1>
+    </div>
+
     <script src="bootstrap-5.3.3/js/bootstrap.bundle.js"></script>
   </body>
 </html>
