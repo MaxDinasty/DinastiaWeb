@@ -12061,13 +12061,23 @@ textarea.form-control-lg {
   object-fit: cover;
   z-index: -1;
 }
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
 .overlay-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   color: white;
+  text-align: center;
 }
 .overlay-content img {
   max-width: 150px;
